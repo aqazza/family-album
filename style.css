@@ -154,6 +154,22 @@ img {
 	transform: translateZ(0);
 	z-index: 2;
 }
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+#gallery figure.zoom-active {
+    animation: zoomIn 0.5s forwards;
+    z-index: 10;
+}
+
 figure img {
 	aspect-ratio: 1 /1;
 	width: 100%;
